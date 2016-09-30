@@ -37,21 +37,27 @@
   </section>
 
   <section class="article-entry">
-    <h4 id="1-hexo是什么？"><a href="#1-hexo是什么？" class="headerlink" title="1. hexo是什么？"></a>1. hexo是什么？</h4><p>​    一个快速、简介并且高效的博客框架</p>
-<p>​    官网: <a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a></p>
-<h4 id="2-基本使用流程"><a href="#2-基本使用流程" class="headerlink" title="2. 基本使用流程"></a>2. 基本使用流程</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure>
+    <h4>1. hexo是什么？</h4>
+<p>​	一个快速、简介并且高效的博客框架</p>
+<p>​	官网: https://hexo.io/zh-cn/</p>
+<h4>2. 基本使用流程</h4>
+<p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div><div class="line">hexo init blog</div><div class="line">cd blog</div><div class="line">npm install</div><div class="line">hexo server</div></pre></td></tr></table></figure></p>
 <blockquote>
 <p>注意:  hexo是用markdown编写的，需要基于node和git，所以在安装前，确保电脑上已经拥有node和git了</p>
 </blockquote>
-<h4 id="3-发布到github上"><a href="#3-发布到github上" class="headerlink" title="3.发布到github上"></a>3.发布到github上</h4><p>​    在_config.yml最后添加:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/itstrive/itstrive.github.com.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h4>3.发布到github上</h4>
+<p>​	在_config.yml最后添加:</p>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/itstrive/itstrive.github.com.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
 <p>然后:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g	//生成静态文件</div><div class="line">hexo d  //发布</div></pre></td></tr></table></figure>
-<h4 id="4-发表一篇文章"><a href="#4-发表一篇文章" class="headerlink" title="4. 发表一篇文章"></a>4. 发表一篇文章</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 在git bash里面运行  hexo new &apos;my_post&apos;</div><div class="line">2. 在source\_post\my_post.md 打开，然后编写</div><div class="line">3. hexo g //生成静态文件</div><div class="line">   hexo s //在本地预览</div><div class="line">   hexo d //发布到github上</div></pre></td></tr></table></figure>
-<h4 id="5-更换主题"><a href="#5-更换主题" class="headerlink" title="5. 更换主题"></a>5. 更换主题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">主题: https://hexo.io/themes/</div><div class="line">随便找一个主题，下载下来，放到themes目录下</div><div class="line">并且更改</div><div class="line">_config.yml</div><div class="line">	theme: 换成themes目录下主题的名字</div></pre></td></tr></table></figure>
-<h4 id="6-删除操作"><a href="#6-删除操作" class="headerlink" title="6.删除操作"></a>6.删除操作</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">删除一篇文章： 只要删除 source/_posts/xxx.md  即可</div><div class="line">然后:  hexo g</div><div class="line">	  hexo d</div><div class="line">	  </div><div class="line">备注:</div><div class="line">	hexo g == hexo generate#生成</div><div class="line">	hexo s == hexo server #启动服务预览</div><div class="line">	hexo d == hexo deploy#部署</div></pre></td></tr></table></figure>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo g	//生成静态文件</div><div class="line">hexo d  //发布</div></pre></td></tr></table></figure></p>
+<h4>4. 发表一篇文章</h4>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1. 在git bash里面运行  hexo new &apos;my_post&apos;</div><div class="line">2. 在source\_post\my_post.md 打开，然后编写</div><div class="line">3. hexo g //生成静态文件</div><div class="line">   hexo s //在本地预览</div><div class="line">   hexo d //发布到github上</div></pre></td></tr></table></figure></p>
+<h4>5. 更换主题</h4>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">主题: https://hexo.io/themes/</div><div class="line">随便找一个主题，下载下来，放到themes目录下</div><div class="line">并且更改</div><div class="line">_config.yml</div><div class="line">	theme: 换成themes目录下主题的名字</div></pre></td></tr></table></figure></p>
+<h4>6.删除操作</h4>
+<p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">删除一篇文章： 只要删除 source/_posts/xxx.md  即可</div><div class="line">然后:  hexo g</div><div class="line">	  hexo d</div><div class="line">	  </div><div class="line">备注:</div><div class="line">	hexo g == hexo generate#生成</div><div class="line">	hexo s == hexo server #启动服务预览</div><div class="line">	hexo d == hexo deploy#部署</div></pre></td></tr></table></figure></p>
 <p>注意: 如果出现报错 error deployer not found: git</p>
-<p>需要安装: npm install hexo-deployer-git –save-dev</p>
+<p>需要安装: npm install hexo-deployer-git --save-dev</p>
 
   </section>
 </article>
@@ -71,7 +77,8 @@
   class="twitter-share-button"
   data-size="large"
   data-via="DrakeLeung"
-  href="https://twitter.com/intent/tweet?text= id="1-hexo是什么？"><a "
+  href="https://twitter.com/intent/tweet?text=>1. hexo是什么？</h4>
+<p"
 >
   Tweet
 </a>
